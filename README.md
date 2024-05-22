@@ -103,11 +103,12 @@ module.exports = {
 
 1. If you add new column attributes, and run the migration, and then want to update the column attributes, you have to follow step 2 again and use:
 
-```queryInterface.changeColumn("table_name" , "column_name" , {
+```
+queryInterface.changeColumn("table_name" , "column_name" , {
 updated attributes
-})```
+})
 
-``` Example
+Example
 
 module.exports = {
     up: async (queryInterface, Sequelize) => {
@@ -125,7 +126,8 @@ module.exports = {
             allowNull: true, // revert any other constraints as needed
         });
     },
-};```
+};
+```
 
 The original Type remain the same in the down section in case you want to revert the updated attributes.
 
@@ -138,7 +140,8 @@ The original Type remain the same in the down section in case you want to revert
    - **down:** This function defines the opposite of the up function. It specifies the changes that should be applied to revert the migration when it is rolled back.
 
    
-   ``` Example
+   ``` 
+   Example
    npx sequelize-cli db:migrate:status
 
    Sequelize CLI [Node: 18.16.0, CLI: 6.6.2, ORM: 6.37.3]
@@ -156,17 +159,22 @@ The original Type remain the same in the down section in case you want to revert
    up 20240521062709-create-test-table.js
    up 20240521063652-create-test-table.js
    up 20240521070914-create-test-table.js
-   down 20240521064106-create-emailTemplate-table.js```
+   down 20240521064106-create-emailTemplate-table.js
+   ```
 
 For changing the column attributes, always run the migration on the file where you change the attributes. If you run the migration globally, it can crash the schema.
 
 If you have 3 pending migration files and you run the migration globally, you might encounter errors such as:
 
-```ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'true) ENGINE=InnoDB'```
+```
+ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'true) ENGINE=InnoDB'
+```
 
 Or if some files have been modified for adding new columns, you might encounter:
 
-```ERROR: Duplicate column name 'column_name'```
+```
+ERROR: Duplicate column name 'column_name'
+```
 
 Therefore, it is better to run the migrations separately to avoid errors and conflicts.
 
