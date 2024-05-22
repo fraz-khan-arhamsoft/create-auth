@@ -29,26 +29,27 @@ This guide will walk you through setting up Sequelize in VS Code, creating migra
 ``` Example
    'use strict';
 
-/** @type {import('sequelize-cli').Migration} \*/
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-    async up(queryInterface, Sequelize) {
-        /**
-  _     Add altering commands here.
-  _
-  _        Example:
-  _        await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-        \*/
-    },
+  async up(queryInterface, Sequelize) {
+    /**
+     * Add altering commands here.
+     *
+     * Example:
+     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
+     */
+  },
 
-    async down(queryInterface, Sequelize) {
-        /\*\*
-        Add reverting commands here.
-        _
-_ Example:
-_ await queryInterface.dropTable('users');
-        \* /
-    }
+  async down(queryInterface, Sequelize) {
+    /**
+     * Add reverting commands here.
+     *
+     * Example:
+     * await queryInterface.dropTable('users');
+     */
+  }
 };
+
 ```
 
 ### Step 3: Add Schema in Migration File
