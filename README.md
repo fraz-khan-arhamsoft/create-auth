@@ -1,8 +1,8 @@
-# Assets Managemnet App - Backend
+# ASSET RACK Managemnet App - Backend
 
 Asset Rack is a user-friendly tool for keeping track of physical assets. It helps organizations manage assets efficiently with features like tracking, maintenance schedules, and facilitate convenient asset distribution among teams.
 
-# Features included are:
+## Features included are:
 
 - Users must sign up and provide all the required information about their company; otherwise, they can't proceed.
 - Users can add assets, track their assets, and more.
