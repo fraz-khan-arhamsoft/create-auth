@@ -26,17 +26,17 @@ To set up Sequelize, a popular ORM for Node.js, you'll need to ensure that you h
 
 ### Prerequisites
 
-- **Node.js** and npm/yarn: Ensure you have Node.js and npm or yarn installed on your system.
-- **npm**: It comes with Node.js, but you can update it using the command npm install -g npm.
-- **Database Server**: Install and set up a database server. Sequelize supports multiple databases:
+- Node.js and npm/yarn: Ensure you have Node.js and npm or yarn installed on your system.
+- npm: It comes with Node.js, but you can update it using the command npm install -g npm.
+- Database Server: Install and set up a database server. Sequelize supports multiple databases:
 
-      - **PostgreSQL**: `npm install pg pg-hstore`
-      - **MySQL**: `npm install mysql2`
-      - **MariaDB**: `npm install mysql2`
-      - **SQLite**: `npm install sqlite3`
-      - **Microsoft SQL Server**: `npm install tedious`
+      - PostgreSQL: `npm install pg pg-hstore`
+      - MySQL: `npm install mysql2`
+      - MariaDB: `npm install mysql2`
+      - SQLite: `npm install sqlite3`
+      - Microsoft SQL Server: `npm install tedious`
 
-- **Sequelize CLI (optional but recommended)**: This provides helpful tools for managing your Sequelize setup.
+- Sequelize CLI (optional but recommended): This provides helpful tools for managing your Sequelize setup.
 
       - Install globally: `npm install -g sequelize-cli`
       - Install locally (for project-specific usage): `npm install --save-dev sequelize-cli`
